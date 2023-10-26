@@ -10,8 +10,8 @@ body,
 			width: 100%;
 		}
 #n8n-chat {
-	width: 75%;
-	height: 90%;
+	width: 60%;
+	height: 95%;
 	background-color:#f2f4f8;
 }</style>
 <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/style.css" rel="stylesheet" />
@@ -22,10 +22,18 @@ createChat({
 	webhookUrl: 'https://sea-app-02.skate-blues.ts.net/webhook/0a2a7868-d978-42dd-898e-3ffd0898a857',
 	mode: "fullscreen",
 	initialMessages: [
-		'Greetings!',
+		'Hello!',
 		'My name is DocBot. How can I help?'
 	],
-	target: '#n8n-chat'
+	i18n: {
+		en: {
+			title: 'Hi there! 👋',
+			subtitle: "",
+			footer: '© Botable - 2023',
+			getStarted: 'Get Started',
+			inputPlaceholder: 'Ask a question..',
+		},
+	},
 });
 </script>
     </head>
