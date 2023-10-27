@@ -1,0 +1,55 @@
+<html><head></head><body>
+
+
+
+    <title>JS Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<div class="container">
+    <canvas id="myChart"></canvas>
+</div>
+  
+<script>
+// Assigning the JSON data to variables:
+var traffic = [101171.4111,26691.06211,9496.024844,290225.5158,228423.1746,39918.09977,155102.9232,151848.545,23331.46974,11896.15768,15004.83511,12422.94895,3516.690076,229551.2303,29727.10247,243410.4717,1654.804846,11954.38696,4903.995788,20258.75017,2154.888117,26560.52547,9982.595053,3598.576379];
+var urls = ["https://www.walmart.com/cp/4-prescriptions/1078664","https://www.walmart.com/ip/EverStart-Maxx-Lead-Acid-Automotive-Battery-Group-Size-24F/28275657","https://www.walmart.com/ip/EverStart-Maxx-Lead-Acid-Automotive-Battery-Group-Size-65N-12-Volt-850-CCA/20703125","https://www.walmart.com/browse/cell-phones/apple-iphone/1105910_7551331_1127173","https://www.walmart.com/ip/Apple-AirPods-with-Charging-Case-2nd-Generation/604342441","https://www.walmart.com/ip/Meta-Quest-2-Oculus-Advanced-All-In-One-Virtual-Reality-Headset-128GB/723227733","https://www.walmart.com/browse/health-medicine/prescription-eyeglasses/976760_1078944_1229596_1229597","https://www.walmart.com/cp/ipad-tablets/1078524","https://www.walmart.com/ip/Great-Value-Pure-Granulated-Sugar-4-lb/10315162","https://www.walmart.com/ip/Keurig-K-Duo-Essentials-Black-Single-Serve-K-Cup-Pod-Coffee-Maker-Black/244686900","https://www.walmart.com/ip/EverStart-Plus-Lead-Acid-Automotive-Battery-Group-Size-65-12-Volt-750-CCA/16795245","https://www.walmart.com/ip/VIZIO-50-Class-V-Series-4K-UHD-LED-Smart-TV-V505-J09/378837297","https://www.walmart.com/ip/Canon-PIXMA-TS3522-All-in-One-Wireless-InkJet-Printer-with-Print-Copy-and-Scan-Features/722961036","https://www.walmart.com/browse/office-supplies/packing-shipping-boxes/1229749_2696828_6702035_9182456","https://www.walmart.com/ip/Great-Value-Purified-Drinking-Water-16-9-fl-oz-Bottles-40-Count/992524020","https://www.walmart.com/ip/Apple-AirPods-Pro-2nd-Generation/1752657021","https://www.walmart.com/ip/onn-65W-Laptop-Charger-w-10-Interchangeable-Tips-10-ft-Power-Cord-for-HP-Dell-Lenovo-Laptops/882312537","https://www.walmart.com/ip/The-Legend-of-Zelda-Tears-of-the-Kingdom-Nintendo-Switch-U-S-Version/1481578625","https://careers.walmart.com/undergraduate-internships","https://www.walmart.com/ip/Blackstone-Adventure-Ready-2-Burner-28-Griddle-Cooking-Station/164875852","https://www.walmart.com/ip/Canon-PIXMA-TR4722-All-in-One-Wireless-InkJet-Printer-with-ADF-Mobile-Print-and-Fax/802747127","https://www.walmart.com/ip/Rain-x-Windshield-Repair-Kit-Saves-Time-And-Money-By-Repairing-Chips-And-Cracks-600001/34163599","https://www.walmart.com/ip/Freshness-Guaranteed-Boneless-Skinless-Chicken-Breasts-Family-Pack-4-7-6-25-lb-Tray/27935840","https://www.walmart.com/help/article/driver-feedback-and-tips/6dbcf806f22e4fc2952790c9dbc5eae5"];
+
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: urls,
+        datasets: [{
+            label: 'Traffic',
+            data: traffic,
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            x: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'URLs'
+                }
+            },
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Traffic'
+                }
+            }
+        }
+    }
+});
+</script>
+
+
+
+</body></html>
